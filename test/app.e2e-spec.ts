@@ -28,7 +28,10 @@ describe('AppController (e2e)', () => {
       .expect(200)
       .expect((res) => {
         expect(res.body).toHaveProperty('status', 'OK');
-        expect(res.body).toHaveProperty('message', 'Learning Platform API is running');
+        expect(res.body).toHaveProperty(
+          'message',
+          'Learning Platform API is running',
+        );
         expect(res.body).toHaveProperty('timestamp');
       });
   });

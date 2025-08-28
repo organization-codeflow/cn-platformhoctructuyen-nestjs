@@ -16,7 +16,9 @@ describe('AppController', () => {
 
   describe('root', () => {
     it('should return "Hello World! Welcome to Learning Platform API"', () => {
-      expect(appController.getHello()).toBe('Hello World! Welcome to Learning Platform API');
+      expect(appController.getHello()).toBe(
+        'Hello World! Welcome to Learning Platform API',
+      );
     });
   });
 
@@ -24,7 +26,10 @@ describe('AppController', () => {
     it('should return health status', () => {
       const result = appController.getHealth();
       expect(result).toHaveProperty('status', 'OK');
-      expect(result).toHaveProperty('message', 'Learning Platform API is running');
+      expect(result).toHaveProperty(
+        'message',
+        'Learning Platform API is running',
+      );
       expect(result).toHaveProperty('timestamp');
     });
   });
